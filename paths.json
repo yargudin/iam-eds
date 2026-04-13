@@ -1,6 +1,8 @@
 {
   "mappings": [
-    "/content/iam-site:/"
+    "/content/iam-site:/",
+    "/content/iam-site/configuration:/.helix/config.json",
+    "/content/iam-site/metadata:/metadata.json"
   ],
   "includes": [
     "/content/iam-site/"
