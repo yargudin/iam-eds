@@ -1,6 +1,8 @@
 import {
-  loadHeader,
   loadFooter,
+  buildBlock,
+  decorateBlock,
+  loadBlock,
   decorateButtons,
   decorateIcons,
   decorateSections,
@@ -10,7 +12,21 @@ import {
   loadSection,
   loadSections,
   loadCSS,
+  getMetadata,
 } from './aem.js';
+
+/**
+ * Loads the header block, supporting custom header blocks via metadata.
+ * @param {Element} header header element
+ */
+async function loadHeader(header) {
+  const headerMeta = getMetadata('header');
+  const blockName = headerMeta || 'header';
+  const headerBlock = buildBlock(blockName, '');
+  header.append(headerBlock);
+  decorateBlock(headerBlock);
+  return loadBlock(headerBlock);
+}
 
 /**
  * Moves all the attributes from a given elmenet to another given element.
