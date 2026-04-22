@@ -1,0 +1,40 @@
+{
+  "variantName": "cards-municipal",
+  "baseBlock": "cards",
+  "version": "1.0.0",
+  "created": "2026-04-15T13:55:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.madrid.es/portal/site/munimadrid",
+    "originPage": "Madrid municipal government homepage",
+    "blockPosition": "multiple"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "mixed",
+    "density": "compact",
+    "purpose": "municipal-services",
+    "imagePattern": "mixed"
+  },
+  "contentPattern": {
+    "structure": "image + title + description/link",
+    "buttonCount": 0,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "municipal/government service pages",
+      "news listings with image + headline",
+      "service directory grids",
+      "event listing cards"
+    ],
+    "notSuitableFor": [
+      "product e-commerce cards",
+      "team member profiles",
+      "pricing table cards"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["content/munimadrid/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-04-15T13:55:00.000Z"
+  }
+}

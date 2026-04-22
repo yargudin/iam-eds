@@ -1,0 +1,70 @@
+.te-ayudamos {
+  font-family: 'DM Sans', sans-serif;
+}
+
+.te-ayudamos-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.te-ayudamos-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+}
+
+.te-ayudamos-title > div {
+  display: contents;
+}
+
+.te-ayudamos-title img {
+  width: 40px;
+  height: 40px;
+}
+
+.te-ayudamos-title p {
+  margin: 0;
+  font-size: 28px;
+  line-height: 28px;
+  color: #1c1c1c;
+  font-weight: 400;
+}
+
+.te-ayudamos-pills {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+@media (width >= 600px) {
+  .te-ayudamos-pills {
+    flex-direction: row;
+  }
+}
+
+.te-ayudamos-pill {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 24px;
+  border-radius: 16px;
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  font-size: 16px;
+  line-height: 21px;
+  color: #1c1c1c;
+  cursor: pointer;
+  transition: box-shadow 0.2s;
+}
+
+.te-ayudamos-pill:hover {
+  box-shadow: 0 0 17px 0 rgba(255, 122, 47, 0.25);
+}
+
+.te-ayudamos-pill a {
+  color: #1c1c1c;
+  text-decoration: none;
+}

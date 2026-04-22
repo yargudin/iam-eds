@@ -1,0 +1,111 @@
+.banner-suena {
+  font-family: 'DM Sans', sans-serif;
+}
+
+.banner-suena-inner {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 24px;
+  padding: 32px;
+  background-color: #1c1c1c;
+  border-radius: 8px;
+  min-height: 140px;
+}
+
+.banner-suena-text {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.banner-suena-text h2,
+.banner-suena-text h3 {
+  margin: 0;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 40px;
+  line-height: 44px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.banner-suena-text p {
+  margin: 0;
+}
+
+.banner-suena-text a {
+  color: #fff;
+  font-size: 16px;
+  line-height: 22px;
+  text-decoration: underline;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.banner-suena-text a::after {
+  content: '\2192';
+  text-decoration: none;
+  display: inline-block;
+}
+
+.banner-suena-text a:hover {
+  color: #ccc;
+}
+
+/* Override button styling for links inside banner */
+.banner-suena-text .button-container {
+  margin: 0;
+}
+
+.banner-suena-text a.button {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: #fff;
+  font-size: 16px;
+  line-height: 22px;
+  text-decoration: underline;
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  margin: 0;
+  font-weight: normal;
+  white-space: normal;
+}
+
+.banner-suena-text a.button::after {
+  content: '\2192';
+  text-decoration: none;
+  display: inline-block;
+}
+
+.banner-suena-text a.button:hover,
+.banner-suena-text a.button:focus {
+  color: #ccc;
+  background-color: transparent;
+}
+
+.banner-suena-logo {
+  flex-shrink: 0;
+}
+
+.banner-suena-logo img {
+  max-width: 80px;
+  height: auto;
+}
+
+@media (width < 600px) {
+  .banner-suena-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .banner-suena-text h2,
+  .banner-suena-text h3 {
+    font-size: 28px;
+    line-height: 32px;
+  }
+}

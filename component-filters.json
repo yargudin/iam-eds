@@ -19,6 +19,12 @@
     ]
   },
   {
+    "id": "cards-municipal",
+    "components": [
+      "card"
+    ]
+  },
+  {
     "id": "cards",
     "components": [
       "card"
@@ -37,6 +43,12 @@
       "image",
       "button",
       "title"
+    ]
+  },
+  {
+    "id": "tabs-audience",
+    "components": [
+      "tabs-audience-item"
     ]
   }
 ]
