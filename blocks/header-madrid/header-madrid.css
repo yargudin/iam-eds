@@ -108,6 +108,8 @@
         display: flex !important;
         visibility: visible !important;
         justify-content: center;
+        flex-wrap: nowrap;
+        max-width: 50vw;
     }
 
     .header-madrid nav[aria-expanded='true'] .nav-sections {
@@ -140,10 +142,17 @@
     cursor: pointer;
     white-space: nowrap;
     transition: background-color 0.2s ease;
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.header-madrid .nav-sections .nav-pill ul {
+    display: none;
 }
 
 .header-madrid .nav-sections .nav-pill:hover {
-    background-color: rgb(215 232 245 / 50%);
+    background-color: rgb(215 232 245);
 }
 
 .header-madrid .nav-sections .nav-pill.nav-pill-active {
