@@ -1,0 +1,38 @@
+{
+  "variantName": "tabs-audience",
+  "baseBlock": "tabs",
+  "version": "1.0.0",
+  "created": "2026-04-15T13:55:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.madrid.es/portal/site/munimadrid",
+    "originPage": "Madrid municipal government homepage",
+    "blockPosition": "bottom"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "dark",
+    "density": "spacious",
+    "purpose": "audience-profiles",
+    "imagePattern": "with-images"
+  },
+  "contentPattern": {
+    "structure": "tab-label + cards-with-images OR link-list",
+    "buttonCount": 0,
+    "imageCount": 5
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "audience/demographic profile tabs",
+      "district/region selector tabs",
+      "category-based content switching"
+    ],
+    "notSuitableFor": [
+      "simple content tabs without rich media",
+      "FAQ-style tabbed content"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["content/munimadrid/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-04-15T13:55:00.000Z"
+  }
+}

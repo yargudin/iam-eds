@@ -1,0 +1,97 @@
+{
+  "templates": [
+    {
+      "name": "munimadrid-homepage",
+      "urls": [
+        "https://www.madrid.es/portal/site/munimadrid"
+      ],
+      "description": "Madrid municipal government homepage with news, services, and city information",
+      "blocks": [
+        {
+          "name": "cards-municipal",
+          "instances": [
+            "div.actualidad .element_info_relevant",
+            "div.a-un-clic .featured_clic",
+            "div.a-un-clic .col-md-9 .element_info_relevant",
+            "div.actividades .element_info_relevant",
+            "ul.carouselFormasParteReajustado li.item",
+            "div.al-minuto ul.row li .items"
+          ]
+        },
+        {
+          "name": "tabs-audience",
+          "instances": [
+            "div.te_interesa_content div.tabspanel"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "id": "section-1",
+          "name": "ES NOTICIA - News",
+          "selector": "div.actualidad",
+          "style": null,
+          "blocks": ["cards-municipal"],
+          "defaultContent": [
+            "h2.title4Inicio",
+            "div.col-xs-12.col-sm-6-ext .info_relevant_img",
+            "ul.list-inline.text-center"
+          ]
+        },
+        {
+          "id": "section-2",
+          "name": "A UN CLIC - Quick Services",
+          "selector": "div.a-un-clic",
+          "style": null,
+          "blocks": ["cards-municipal"],
+          "defaultContent": [
+            "h2.title4"
+          ]
+        },
+        {
+          "id": "section-3",
+          "name": "Y TAMBIÉN EN TU CIUDAD - Events",
+          "selector": "div.actividades",
+          "style": null,
+          "blocks": ["cards-municipal"],
+          "defaultContent": [
+            "h3.actividades__title",
+            "div.calendario",
+            "ul.list-inline.text-center"
+          ]
+        },
+        {
+          "id": "section-4",
+          "name": "Descubre el Madrid - Features",
+          "selector": "div.tu-formas-parte",
+          "style": "dark",
+          "blocks": ["cards-municipal"],
+          "defaultContent": [
+            "h2.title5"
+          ]
+        },
+        {
+          "id": "section-5",
+          "name": "MADRID AL MINUTO - Real-time Info",
+          "selector": "div.al-minuto",
+          "style": null,
+          "blocks": ["cards-municipal"],
+          "defaultContent": [
+            "h2.title4",
+            "p.date"
+          ]
+        },
+        {
+          "id": "section-6",
+          "name": "LO QUE TE INTERESA - Profiles & Districts",
+          "selector": "div.te_interesa_content",
+          "style": "dark",
+          "blocks": ["tabs-audience"],
+          "defaultContent": [
+            "h2.title4"
+          ]
+        }
+      ]
+    }
+  ]
+}
