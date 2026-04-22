@@ -14,7 +14,7 @@ export default function decorate(block) {
   const greca = document.createElement('div');
   greca.className = 'hero-mosaic-greca';
   greca.setAttribute('aria-hidden', 'true');
-  block.append(greca);
+  block.parentElement.insertBefore(greca, block);
 
   // Mosaic container — uses a single image behind a CSS grid mask
   const mosaic = document.createElement('div');

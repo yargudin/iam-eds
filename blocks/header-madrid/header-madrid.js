@@ -108,18 +108,19 @@ export default async function decorate(block) {
     <span class="nav-hamburger-icon"></span>
   </button>`;
   hamburger.addEventListener('click', () => toggleMenu(nav));
-  nav.prepend(hamburger);
+  navTools.append(hamburger);
   nav.setAttribute('aria-expanded', 'false');
 
   toggleMenu(nav, isDesktop.matches);
   isDesktop.addEventListener('change', () => toggleMenu(nav, isDesktop.matches));
   window.addEventListener('keydown', closeOnEscape);
 
-  // Greca decorative border
-  buildGreca(nav);
 
   const navWrapper = document.createElement('div');
   navWrapper.className = 'nav-wrapper';
   navWrapper.append(nav);
+
+  // Greca decorative border
+  buildGreca(navWrapper);
   block.append(navWrapper);
 }

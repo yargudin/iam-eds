@@ -27,10 +27,10 @@ header nav[aria-expanded='true'] {
     'sections sections' 1fr
     'tools tools' var(--nav-height) / auto 1fr;
   overflow-y: auto;
-  min-height: 100dvh;
+  min-height: 100vh;
 }
 
-@media (width >= 900px) {
+@media screen and (min-width: 900px) {
   header .nav-wrapper {
     position: relative;
   }
@@ -132,7 +132,7 @@ header nav[aria-expanded='true'] .nav-hamburger-icon::after {
   transform: rotate(-45deg);
 }
 
-@media (width >= 900px) {
+@media (min-width: 900px) {
   header nav .nav-hamburger {
     display: none;
     visibility: hidden;
@@ -185,7 +185,7 @@ header nav .nav-sections ul > li > ul > li {
   font-weight: 400;
 }
 
-@media (width >= 900px) {
+@media (min-width: 900px) {
   header nav .nav-sections {
     display: block;
     visibility: visible;

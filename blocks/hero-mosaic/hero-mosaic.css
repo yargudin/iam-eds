@@ -1,139 +1,167 @@
 /* Hero Mosaic Block */
 .hero-mosaic {
-  --madrid-font: 'DM Sans', sans-serif;
 
-  position: relative;
-  width: 100%;
-  max-width: 1280px;
-  margin: 0 auto;
-  overflow: hidden;
+    --madrid-font: 'DM Sans', sans-serif;
+
+    position: relative;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding-top: 30px;
+    /*overflow: hidden;*/
 }
 
 /* Greca decorative border */
-.hero-mosaic .hero-mosaic-greca {
-  width: 100%;
-  height: 20px;
-  background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='10' cy='10' r='8' stroke='%23b8d4ea' stroke-width='1.5' stroke-dasharray='3 2' fill='none'/%3E%3C/svg%3E");
-  background-repeat: repeat-x;
-  background-position: center;
-  background-size: 20px 20px;
+.hero-mosaic-wrapper .hero-mosaic-greca {
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    width: 100vw;
+    height: 20px;
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='10' cy='10' r='8' stroke='%23b8d4ea' stroke-width='1.5' stroke-dasharray='3 2' fill='none'/%3E%3C/svg%3E");
+    background-repeat: repeat-x;
+    background-position: center;
+    background-size: 20px 20px;
 }
 
 /* Image mosaic grid — 4 columns x 2 rows */
 .hero-mosaic .hero-mosaic-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 200px 380px;
-  gap: 8px;
-  padding: 8px 16px 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 250px 250px;
+    gap: 8px;
+    padding: 8px 16px 0;
 }
 
 /* Each cell shows a portion of the same background image */
 .hero-mosaic .hero-mosaic-cell {
-  background-size: 400% 200%;
-  background-repeat: no-repeat;
-  border-radius: 8px;
-  overflow: hidden;
+    background-size: 400% 200%;
+    background-repeat: no-repeat;
+    border-radius: 8px;
+    overflow: hidden;
 }
 
 /* Top row — tiles 1-4 (row 1) */
-.hero-mosaic .hero-mosaic-cell-1 { background-position: 0% 0%; }
-.hero-mosaic .hero-mosaic-cell-2 { background-position: 33.33% 0%; }
-.hero-mosaic .hero-mosaic-cell-3 { background-position: 66.66% 0%; }
-.hero-mosaic .hero-mosaic-cell-4 { background-position: 100% 0%; }
-
+.hero-mosaic .hero-mosaic-cell-1 { background-position: 0      0   ; }
+.hero-mosaic .hero-mosaic-cell-2 { background-position: 33.33% 0   ; }
+.hero-mosaic .hero-mosaic-cell-3 { background-position: 66.66% 0   ; }
+.hero-mosaic .hero-mosaic-cell-4 { background-position: 100%   0   ; }
 /* Bottom row — tiles 5-8 (row 2) */
-.hero-mosaic .hero-mosaic-cell-5 { background-position: 0% 100%; }
+.hero-mosaic .hero-mosaic-cell-5 { background-position: 0      100%; }
 .hero-mosaic .hero-mosaic-cell-6 { background-position: 33.33% 100%; }
 .hero-mosaic .hero-mosaic-cell-7 { background-position: 66.66% 100%; }
-.hero-mosaic .hero-mosaic-cell-8 { background-position: 100% 100%; }
+.hero-mosaic .hero-mosaic-cell-8 { background-position: 100%   100%; }
 
 /* Title overlay card */
 .hero-mosaic .hero-mosaic-title {
-  position: absolute;
-  bottom: 0;
-  left: 16px;
-  max-width: 619px;
-  background-color: #fff;
-  padding: 24px 48px;
-  font-family: var(--madrid-font);
-  z-index: 2;
+    position: absolute;
+    bottom: 250px;
+    left: 16px;
+    max-width: 619px;
+    background-color: #fff;
+    padding: 24px 48px;
+    font-family: var(--madrid-font);
+    z-index: 2;
+    min-width: 41%;
 }
 
 .hero-mosaic .hero-mosaic-title h1,
 .hero-mosaic .hero-mosaic-title h2 {
-  margin: 0;
-  color: #1c1c1c;
-  font-family: var(--madrid-font);
+    margin: 0;
+    color: #1c1c1c;
+    font-family: var(--madrid-font);
 }
 
 .hero-mosaic .hero-mosaic-title h1 {
-  font-weight: 600;
-  font-size: 56px;
-  line-height: 60px;
+    font-weight: 600;
+    font-size: 56px;
+    line-height: 60px;
 }
 
 .hero-mosaic .hero-mosaic-title h2 {
-  font-weight: 500;
-  font-size: 40px;
-  line-height: 52px;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 52px;
 }
 
 .hero-mosaic .hero-mosaic-title p {
-  margin: 0;
-  font-family: var(--madrid-font);
-  color: #1c1c1c;
+    margin: 0;
+    font-family: var(--madrid-font);
+    color: #1c1c1c;
 }
 
 .hero-mosaic .hero-mosaic-title p:first-child {
-  font-weight: 600;
-  font-size: 56px;
-  line-height: 60px;
+    font-weight: 600;
+    font-size: 56px;
+    line-height: 60px;
 }
 
 .hero-mosaic .hero-mosaic-title p:nth-child(2) {
-  font-weight: 500;
-  font-size: 40px;
-  line-height: 52px;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 52px;
 }
 
 /* Mobile responsive */
-@media (width < 900px) {
-  .hero-mosaic .hero-mosaic-grid {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(4, 140px);
-    gap: 4px;
-    padding: 4px 8px 0;
-  }
+@media screen and (max-width: 900px) {
+    .hero-mosaic .hero-mosaic-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 140px);
+        gap: 4px;
+        padding: 4px 8px 0;
+    }
 
-  /* Recalculate positions for 2-column mobile layout */
-  .hero-mosaic .hero-mosaic-cell-1 { background-position: 0% 0%; }
-  .hero-mosaic .hero-mosaic-cell-2 { background-position: 100% 0%; }
-  .hero-mosaic .hero-mosaic-cell-3 { background-position: 0% 33%; }
-  .hero-mosaic .hero-mosaic-cell-4 { background-position: 100% 33%; }
-  .hero-mosaic .hero-mosaic-cell-5 { background-position: 0% 66%; }
-  .hero-mosaic .hero-mosaic-cell-6 { background-position: 100% 66%; }
-  .hero-mosaic .hero-mosaic-cell-7 { background-position: 0% 100%; }
-  .hero-mosaic .hero-mosaic-cell-8 { background-position: 100% 100%; }
+    /* Recalculate positions for 2-column mobile layout */
+    .hero-mosaic .hero-mosaic-cell-1 {
+        background-position: 0 0;
+    }
 
-  .hero-mosaic .hero-mosaic-cell {
-    background-size: 200% 400%;
-  }
+    .hero-mosaic .hero-mosaic-cell-2 {
+        background-position: 100% 0;
+    }
 
-  .hero-mosaic .hero-mosaic-title {
-    position: relative;
-    left: 0;
-    max-width: 100%;
-    padding: 16px 24px;
-  }
+    .hero-mosaic .hero-mosaic-cell-3 {
+        background-position: 0 33%;
+    }
 
-  .hero-mosaic .hero-mosaic-title p:first-child {
-    font-size: 32px;
-    line-height: 36px;
-  }
+    .hero-mosaic .hero-mosaic-cell-4 {
+        background-position: 100% 33%;
+    }
 
-  .hero-mosaic .hero-mosaic-title p:nth-child(2) {
-    font-size: 24px;
-    line-height: 32px;
-  }
+    .hero-mosaic .hero-mosaic-cell-5 {
+        background-position: 0 66%;
+    }
+
+    .hero-mosaic .hero-mosaic-cell-6 {
+        background-position: 100% 66%;
+    }
+
+    .hero-mosaic .hero-mosaic-cell-7 {
+        background-position: 0 100%;
+    }
+
+    .hero-mosaic .hero-mosaic-cell-8 {
+        background-position: 100% 100%;
+    }
+
+    .hero-mosaic .hero-mosaic-cell {
+        background-size: 200% 400%;
+    }
+
+    .hero-mosaic .hero-mosaic-title {
+        position: relative;
+        left: 0;
+        max-width: 100%;
+        padding: 16px 24px;
+    }
+
+    .hero-mosaic .hero-mosaic-title p:first-child {
+        font-size: 32px;
+        line-height: 36px;
+    }
+
+    .hero-mosaic .hero-mosaic-title p:nth-child(2) {
+        font-size: 24px;
+        line-height: 32px;
+    }
 }
