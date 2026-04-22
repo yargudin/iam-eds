@@ -18,7 +18,11 @@ export default function decorate(block) {
     const pill = document.createElement('div');
     pill.className = 'te-ayudamos-pill';
     while (row.firstElementChild) {
-      pill.append(...row.firstElementChild.childNodes);
+      const child = row.firstElementChild;
+      if (child.childNodes.length > 0) {
+        pill.append(...child.childNodes);
+      }
+      child.remove();
     }
     pillsContainer.append(pill);
   });
