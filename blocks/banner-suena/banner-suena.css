@@ -7,11 +7,10 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-end;
-  gap: 24px;
-  padding: 32px;
-  background-color: #1c1c1c;
-  border-radius: 8px;
-  min-height: 140px;
+  gap: 4px;
+  padding: 24px 48px;
+  background-color: var(--madrid-blue);
+  height: 160px;
 }
 
 .banner-suena-text {

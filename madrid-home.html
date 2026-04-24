@@ -1,36 +1,205 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta http-equiv="Content-Security-Policy"
-    content="script-src 'nonce-aem' 'strict-dynamic' 'unsafe-inline' http: https:; base-uri 'self'; object-src 'none';"
-    move-to-http-header="true">
+    <meta http-equiv="Content-Security-Policy"
+          content="script-src 'nonce-aem' 'strict-dynamic' 'unsafe-inline' http: https:; base-uri 'self'; object-src 'none';"
+          move-to-http-header="true">
   <title>Madrid - Ayuntamiento de Madrid</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="header" content="header-madrid">
-  <script nonce="aem" src="/scripts/aem.js" type="module"></script>
-  <script nonce="aem" src="/scripts/scripts.js" type="module"></script>
-  <link rel="stylesheet" href="/styles/styles.css">
+    <script nonce="aem" src="/scripts/aem.js" type="module"></script>
+    <script nonce="aem" src="/scripts/scripts.js" type="module"></script>
+    <link rel="stylesheet" href="/styles/styles.css"/>
+    <meta name="image"
+          content="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/07a2afdc-3aa3-40e9-8fc5-faa6a9c4f609">
+    <meta property="og:image"
+          content="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/07a2afdc-3aa3-40e9-8fc5-faa6a9c4f609">
+    <meta name="twitter:image"
+          content="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/07a2afdc-3aa3-40e9-8fc5-faa6a9c4f609">
 </head>
 <body>
-  <header></header>
-  <main>
+<header></header>
+<main>
     <div>
-      <div class="hero-mosaic">
-        <div>
-          <div>
-            <picture><img src="/blocks/hero-mosaic/hero-puerta-alcala.jpg" alt="Puerta de Alcalá, Madrid"></picture>
-          </div>
+        <div class="hero-mosaic">
+            <div>
+                <div>
+                    <picture><img src="/images/hero-puerta-alcala.jpg" alt="Puerta de Alcalá, Madrid"></picture>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <p>Tu ayuntamiento</p>
+                    <p>más cerca de ti</p>
+                </div>
+            </div>
         </div>
-        <div>
-          <div>
-            <p>Tu ayuntamiento</p>
-            <p>más cerca de ti</p>
-          </div>
-        </div>
-      </div>
-      <div class="card"></div>
+        <div class="card"></div>
     </div>
-  </main>
-  <footer></footer>
+    <div>
+        <h2>¿Qué pasa en Madrid?</h2>
+        <div class="cards-noticia">
+            <div>
+                <div>
+                    <picture>
+                        <source type="image/webp"
+                                src="/images/hero-puerta-alcala.jpg"
+                                media="(min-width: 600px)">
+                        <img loading="lazy" alt="Finaliza la construcción del edificio multifuncional de Guindalera"
+                             src="/images/hero-puerta-alcala.jpg"
+                             width="750" height="563">
+                    </picture>
+                </div>
+                <div>
+                    <p>Finaliza la construcción del edificio multifuncional de Guindalera</p>
+                    <p><a href="/noticias/guindalera">Leer noticia</a></p>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <picture>
+                        <source type="image/webp"
+                                src="/images/hero-puerta-alcala.jpg"
+                                media="(min-width: 600px)">
+                        <img loading="lazy" alt="Almeida: Madrid es la capital mundial del deporte"
+                             src="/images/hero-puerta-alcala.jpg"
+                             width="750" height="563">
+                    </picture>
+                </div>
+                <div>
+                    <p>Almeida: &quot;Madrid es la capital mundial del deporte todos los días del año&quot;</p>
+                    <p><a href="/noticias/capital-mundial-deporte">Leer noticia</a></p>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <picture>
+                        <source type="image/webp"
+                                src="/images/hero-puerta-alcala.jpg"
+                                media="(min-width: 600px)">
+                        <img loading="lazy"
+                             alt="El Ayuntamiento activa una nueva hoja de ruta para mejorar el espacio público en Moratalaz"
+                             src="/images/hero-puerta-alcala.jpg"
+                             width="750" height="563">
+                    </picture>
+                </div>
+                <div>
+                    <p>El Ayuntamiento activa una nueva hoja de ruta para mejorar el espacio público en Moratalaz</p>
+                    <p><a href="/noticias/moratalaz">Leer noticia</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <h2 id="juntos-mejoramos-madrid">Juntos mejoramos Madrid</h2>
+        <div class="banner-suena">
+            <div>
+                <div>
+                    <h3>Sueña Madrid</h3>
+                    <p><a href="/suena-madrid">Participa en Sueña Madrid</a></p>
+                </div>
+                <div>
+                    <picture>
+                        <img loading="lazy" alt="Sueña Madrid logo"
+                             src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/ae4c8c01-88f9-4d6f-b1d0-71bc8a1aa10c"
+                             width="80" height="80">
+                    </picture>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="promo-oposiciones">
+            <div>
+                <div>
+                    <picture>
+                        <source type="image/webp"
+                                srcset="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/5566c411-4bad-47ea-83d1-e64abef26a50"
+                                media="(min-width: 600px)">
+                        <img loading="lazy" alt="Mujer estudiando con libros"
+                             src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/5566c411-4bad-47ea-83d1-e64abef26a50"
+                             width="750" height="500">
+                    </picture>
+                </div>
+                <div>
+                    <p>¿Estás opositando o pensando en ello?</p>
+                    <p><a href="/oposiciones">Explora oposiciones</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <h2 id="madrid-en-cifras-2026">Madrid en cifras 2026</h2>
+        <div class="cifras-madrid">
+            <div>
+                <div>
+                    <p>Presupuesto servicios públicos</p>
+                </div>
+                <div>
+                    <p>3.379 M€</p>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <p>Contratos públicos</p>
+                </div>
+                <div>
+                    <p>2.847</p>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <p>Citas atendidas en 2026</p>
+                </div>
+                <div>
+                    <p>+277.277</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="promo-sede">
+            <div>
+                <div>
+                    <h3>Tus trámites, sin complicaciones</h3>
+                    <p>Accede a Sede y te guiamos paso a paso.</p>
+                    <p><a href="/sede">Accede a Sede</a></p>
+                </div>
+                <div>
+                    <picture>
+                        <source type="image/webp"
+                                srcset="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/e8158220-e3d8-48d9-9b5c-bce3c7fc3451"
+                                media="(min-width: 600px)">
+                        <img loading="lazy" alt="Mujer trabajando con portátil"
+                             src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/e8158220-e3d8-48d9-9b5c-bce3c7fc3451"
+                             width="750" height="500">
+                    </picture>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="promo-ciudad">
+            <div>
+                <div>
+                    <picture>
+                        <source type="image/webp"
+                                srcset="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/be26e80e-dd4e-41f5-b60a-3585cbda1053"
+                                media="(min-width: 600px)">
+                        <img loading="lazy" alt="Asómate a Madrid - arquitectura"
+                             src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/be26e80e-dd4e-41f5-b60a-3585cbda1053"
+                             width="750" height="500">
+                    </picture>
+                </div>
+                <div>
+                    <h3>Asómate a Madrid</h3>
+                    <p>Accede a Ciudad y descubre la vida que hay en Madrid.</p>
+                    <p><a href="/ciudad">Accede a Ciudad</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<footer></footer>
 </body>
 </html>

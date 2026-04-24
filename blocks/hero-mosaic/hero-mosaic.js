@@ -10,12 +10,6 @@ export default function decorate(block) {
 
   block.textContent = '';
 
-  // Greca decorative border
-  const greca = document.createElement('div');
-  greca.className = 'hero-mosaic-greca';
-  greca.setAttribute('aria-hidden', 'true');
-  block.parentElement.insertBefore(greca, block);
-
   // Mosaic container — uses a single image behind a CSS grid mask
   const mosaic = document.createElement('div');
   mosaic.className = 'hero-mosaic-grid';

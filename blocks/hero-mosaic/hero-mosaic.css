@@ -1,27 +1,14 @@
-/* Hero Mosaic Block */
-.hero-mosaic {
-
-    --madrid-font: 'DM Sans', sans-serif;
-
-    position: relative;
-    width: 100%;
-    max-width: 1280px;
-    margin: 0 auto;
-    padding-top: 30px;
-    /*overflow: hidden;*/
+.section.hero-mosaic-container,
+.section.hero-mosaic-container > .hero-mosaic-wrapper {
+    padding: 0;
 }
 
-/* Greca decorative border */
-.hero-mosaic-wrapper .hero-mosaic-greca {
-    position: absolute;
-    left: 0;
-    padding: 5px 0;
-    width: 100vw;
-    height: 20px;
-    background-image: url("/icons/circle.svg"), url("/icons/square.svg");
-    background-repeat: repeat-x;
-    background-position: 5px, 25px 5px;
-    background-size: 40px 20px, 40px 20px;
+/* Hero Mosaic Block */
+.hero-mosaic {
+    position: relative;
+    width: 100%;
+    /* max-width: 1280px; */
+    margin: 0;
 }
 
 /* Image mosaic grid — 4 columns x 2 rows */
@@ -29,7 +16,7 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 250px 250px;
-    gap: 8px;
+    gap: 16px;
     padding: 8px 16px 0;
 }
 
@@ -57,12 +44,13 @@
     position: absolute;
     bottom: 250px;
     left: 16px;
+    width: 619px;
     max-width: 619px;
     background-color: #fff;
     padding: 24px 48px;
     font-family: var(--madrid-font);
     z-index: 2;
-    min-width: 41%;
+    box-sizing: border-box;
 }
 
 .hero-mosaic .hero-mosaic-title h1,
