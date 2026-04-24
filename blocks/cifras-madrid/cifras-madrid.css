@@ -1,44 +1,44 @@
 .cifras-madrid {
-  font-family: 'DM Sans', sans-serif;
+    font-family: 'DM Sans', sans-serif;
 }
 
 .cifras-madrid-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 16px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
 }
 
 @media (width >= 600px) {
-  .cifras-madrid-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+    .cifras-madrid-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 .cifras-madrid-card {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  padding: 8px;
-  border: 1px solid #1c1c1c;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 8px;
+    border: 1px solid #1c1c1c;
 }
 
 .cifras-madrid-card p {
-  margin: 0;
+    margin: 0;
 }
 
 .cifras-madrid-card .cifras-madrid-label,
 .cifras-madrid-card p:first-child {
-  font-size: 14px;
-  line-height: 18px;
-  color: #1c1c1c;
-  border-bottom: 1px solid #1c1c1c;
-  padding-bottom: 8px;
+    font-size: 14px;
+    line-height: 18px;
+    color: #1c1c1c;
+    border-bottom: 1px solid #1c1c1c;
+    padding-bottom: 8px;
 }
 
 .cifras-madrid-card .cifras-madrid-value,
 .cifras-madrid-card p:last-child {
-  font-size: 32px;
-  line-height: 42px;
-  font-weight: 700;
-  color: #1c1c1c;
+    font-size: 32px;
+    line-height: 42px;
+    font-weight: 700;
+    color: #1c1c1c;
 }

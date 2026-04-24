@@ -1,102 +1,102 @@
 .promo-oposiciones {
-  font-family: 'DM Sans', sans-serif;
+    font-family: 'DM Sans', sans-serif;
 }
 
 .promo-oposiciones-inner {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-  align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
 }
 
 @media (width >= 900px) {
-  .promo-oposiciones-inner {
-    flex-direction: row;
-  }
+    .promo-oposiciones-inner {
+        flex-direction: row;
+    }
 }
 
 .promo-oposiciones-image {
-  flex: 0 0 auto;
-  width: 100%;
-  max-width: 400px;
-  border-radius: 8px;
-  overflow: hidden;
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 8px;
+    overflow: hidden;
 }
 
 .promo-oposiciones-image img {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: cover;
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
 }
 
 .promo-oposiciones-text {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
 }
 
 .promo-oposiciones-text img {
-  width: 48px;
-  height: 48px;
+    width: 48px;
+    height: 48px;
 }
 
 .promo-oposiciones-text h3,
 .promo-oposiciones-text p:first-of-type {
-  margin: 0;
-  font-size: 28px;
-  line-height: 28px;
-  color: #1c1c1c;
-  font-weight: 400;
+    margin: 0;
+    font-size: 28px;
+    line-height: 28px;
+    color: #1c1c1c;
+    font-weight: 400;
 }
 
 .promo-oposiciones-text a {
-  color: #0055a0;
-  font-size: 16px;
-  line-height: 22px;
-  text-decoration: underline;
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
+    color: #0055a0;
+    font-size: 16px;
+    line-height: 22px;
+    text-decoration: underline;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
 }
 
 .promo-oposiciones-text a::after {
-  content: '\2192';
-  text-decoration: none;
-  display: inline-block;
+    content: '\2192';
+    text-decoration: none;
+    display: inline-block;
 }
 
 /* Override button styling */
 .promo-oposiciones-text .button-container {
-  margin: 0;
+    margin: 0;
 }
 
 .promo-oposiciones-text a.button {
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  color: #0055a0;
-  font-size: 16px;
-  line-height: 22px;
-  text-decoration: underline;
-  background-color: transparent;
-  border: none;
-  border-radius: 0;
-  padding: 0;
-  margin: 0;
-  font-weight: normal;
-  white-space: normal;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    color: #0055a0;
+    font-size: 16px;
+    line-height: 22px;
+    text-decoration: underline;
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    margin: 0;
+    font-weight: normal;
+    white-space: normal;
 }
 
 .promo-oposiciones-text a.button::after {
-  content: '\2192';
-  text-decoration: none;
-  display: inline-block;
+    content: '\2192';
+    text-decoration: none;
+    display: inline-block;
 }
 
 .promo-oposiciones-text a.button:hover,
 .promo-oposiciones-text a.button:focus {
-  color: #003d73;
-  background-color: transparent;
+    color: #003d73;
+    background-color: transparent;
 }

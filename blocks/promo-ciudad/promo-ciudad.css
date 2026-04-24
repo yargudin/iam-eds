@@ -1,87 +1,87 @@
 .promo-ciudad {
-  font-family: 'DM Sans', sans-serif;
+    font-family: 'DM Sans', sans-serif;
 }
 
 .promo-ciudad-inner {
-  display: flex;
-  flex-direction: column;
-  gap: 0;
-  align-items: stretch;
-  border-radius: 8px;
-  overflow: hidden;
-  background-color: #f6f6f6;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    align-items: stretch;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #f6f6f6;
 }
 
 @media (width >= 900px) {
-  .promo-ciudad-inner {
-    flex-direction: row;
-    align-items: center;
-  }
+    .promo-ciudad-inner {
+        flex-direction: row;
+        align-items: center;
+    }
 }
 
 .promo-ciudad-image {
-  flex: 1;
-  line-height: 0;
+    flex: 1;
+    line-height: 0;
 }
 
 .promo-ciudad-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 @media (width >= 900px) {
-  .promo-ciudad-image {
-    max-width: 50%;
-  }
+    .promo-ciudad-image {
+        max-width: 50%;
+    }
 
-  .promo-ciudad-image img {
-    min-height: 280px;
-  }
+    .promo-ciudad-image img {
+        min-height: 280px;
+    }
 }
 
 .promo-ciudad-text {
-  flex: 1;
-  padding: 32px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
+    flex: 1;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 }
 
 .promo-ciudad-text h3,
 .promo-ciudad-text p:first-child {
-  margin: 0;
-  font-size: 28px;
-  line-height: 28px;
-  color: #1c1c1c;
-  font-weight: 400;
+    margin: 0;
+    font-size: 28px;
+    line-height: 28px;
+    color: #1c1c1c;
+    font-weight: 400;
 }
 
 .promo-ciudad-text p {
-  margin: 0;
-  font-size: 16px;
-  line-height: 21px;
-  color: #1c1c1c;
+    margin: 0;
+    font-size: 16px;
+    line-height: 21px;
+    color: #1c1c1c;
 }
 
 .promo-ciudad-text a.button {
-  display: inline-block;
-  background-color: #0055a0;
-  color: #fff;
-  border-radius: 24px;
-  padding: 10px 24px;
-  font-size: 16px;
-  line-height: 22px;
-  font-weight: 500;
-  text-decoration: none;
-  border: none;
-  width: fit-content;
-  margin: 8px 0 0;
+    display: inline-block;
+    background-color: #0055a0;
+    color: #fff;
+    border-radius: 24px;
+    padding: 10px 24px;
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 500;
+    text-decoration: none;
+    border: none;
+    width: fit-content;
+    margin: 8px 0 0;
 }
 
 .promo-ciudad-text a.button:hover,
 .promo-ciudad-text a.button:focus {
-  background-color: #003d73;
-  color: #fff;
+    background-color: #003d73;
+    color: #fff;
 }

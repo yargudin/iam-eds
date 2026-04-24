@@ -20,10 +20,11 @@
     --link-hover-color: #1d3ecf;
     --madrid-blue: #0055a0;
     --madrid-pill-active-bg: #d7e8f5;
-    
+
     /* fonts */
     --body-font-family: roboto, roboto-fallback, sans-serif;
-    --heading-font-family: roboto-condensed, roboto-condensed-fallback, sans-serif;
+    --heading-font-family:
+        roboto-condensed, roboto-condensed-fallback, sans-serif;
     --madrid-font: 'DM Sans', sans-serif;
     /* body sizes */
     --body-font-size-m: 22px;
@@ -101,8 +102,8 @@ footer .footer {
     visibility: hidden;
 }
 
-header .header[data-block-status="loaded"],
-footer .footer[data-block-status="loaded"] {
+header .header[data-block-status='loaded'],
+footer .footer[data-block-status='loaded'] {
     visibility: visible;
 }
 
@@ -168,7 +169,7 @@ pre {
     white-space: pre;
 }
 
-main>div {
+main > div {
     margin: 40px 16px;
 }
 
@@ -254,17 +255,17 @@ main img {
 }
 
 /* sections */
-main>.section {
+main > .section {
     margin: 40px 0;
 }
 
-main>.section>div {
+main > .section > div {
     /*max-width: 1200px;*/
     margin: auto;
     padding: 0 24px;
 }
 
-main>.section:first-of-type {
+main > .section:first-of-type {
     margin-top: 0;
 }
 

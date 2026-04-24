@@ -1,5 +1,5 @@
 .cards-noticia {
-    >ul {
+    > ul {
         list-style: none;
         margin: 0;
         padding: 0;
@@ -15,7 +15,7 @@
             grid-template-columns: repeat(3, 1fr);
         }
 
-        >li {
+        > li {
             background-color: var(--background-color);
             overflow: hidden;
             position: relative;
@@ -45,7 +45,7 @@
                 height: 124px;
                 display: flex;
                 flex-direction: column;
-                justify-content: space-between;;
+                justify-content: space-between;
 
                 p {
                     margin: 0;
@@ -84,8 +84,8 @@
                     font-weight: normal;
 
                     &::after {
-                        content: "";
-                        background-image: url("/icons/right-arrow.svg");
+                        content: '';
+                        background-image: url('/icons/right-arrow.svg');
                         background-repeat: no-repeat;
                         background-size: cover;
                         background-position: center;

@@ -1,9 +1,9 @@
 {
-  "type": "xwalk",
-  "libraryUrl": "https://main--sta-xwalk-boilerplate--aemysites.aem.page/tools/sidekick/library.json",
-  "contentHostUrl": "author-p190104-e1978382.adobeaemcloud.com",
-  "aemSitePath": "/content/iam-site",
-  "aemAssetsFolderPath": "/content/dam/iam-site",
-  "aemSiteName": "iam-site",
-  "aemSiteTitle": "Ayuntamiento de Madrid"
+    "type": "xwalk",
+    "libraryUrl": "https://main--sta-xwalk-boilerplate--aemysites.aem.page/tools/sidekick/library.json",
+    "contentHostUrl": "author-p190104-e1978382.adobeaemcloud.com",
+    "aemSitePath": "/content/iam-site",
+    "aemAssetsFolderPath": "/content/dam/iam-site",
+    "aemSiteName": "iam-site",
+    "aemSiteTitle": "Ayuntamiento de Madrid"
 }

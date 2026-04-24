@@ -2,20 +2,30 @@ import { getMetadata } from '../../scripts/aem.js';
 import { loadFragment } from '../fragment/fragment.js';
 
 const isDesktop = window.matchMedia('(min-width: 900px)');
-console.log({isDesktop});
+console.log({ isDesktop });
 
 function toggleMenu(nav, forceExpanded = null) {
-    const expanded = forceExpanded !== null ? !forceExpanded : nav.getAttribute('aria-expanded') === 'true';
+    const expanded =
+        forceExpanded !== null
+            ? !forceExpanded
+            : nav.getAttribute('aria-expanded') === 'true';
     const button = nav.querySelector('.nav-hamburger button');
-    document.body.style.overflowY = (expanded || isDesktop.matches) ? '' : 'hidden';
+    document.body.style.overflowY =
+        expanded || isDesktop.matches ? '' : 'hidden';
     nav.setAttribute('aria-expanded', expanded ? 'false' : 'true');
-    button.setAttribute('aria-label', expanded ? 'Open navigation' : 'Close navigation');
+    button.setAttribute(
+        'aria-label',
+        expanded ? 'Open navigation' : 'Close navigation',
+    );
 }
 
 function closeOnEscape(e) {
     if (e.code === 'Escape') {
         const nav = document.getElementById('nav-madrid');
-        if (nav.getAttribute('aria-expanded') === 'true' && !isDesktop.matches) {
+        if (
+            nav.getAttribute('aria-expanded') === 'true' &&
+            !isDesktop.matches
+        ) {
             toggleMenu(nav);
             nav.querySelector('button').focus();
         }
@@ -32,7 +42,9 @@ function buildGreca(container) {
 
 export default async function decorate(block) {
     const navMeta = getMetadata('nav');
-    const navPath = navMeta ? new URL(navMeta, window.location).pathname : '/nav';
+    const navPath = navMeta
+        ? new URL(navMeta, window.location).pathname
+        : '/nav';
     const fragment = await loadFragment(navPath);
 
     block.textContent = '';
@@ -60,7 +72,9 @@ export default async function decorate(block) {
     // Sections: convert nav items into pill-style buttons
     const navSections = nav.querySelector('.nav-sections');
     if (navSections) {
-        const items = navSections.querySelectorAll(':scope .default-content-wrapper > ul > li');
+        const items = navSections.querySelectorAll(
+            ':scope .default-content-wrapper > ul > li',
+        );
         items.forEach((item, idx) => {
             item.classList.add('nav-pill');
             // First item is active by default
@@ -107,9 +121,10 @@ export default async function decorate(block) {
     nav.setAttribute('aria-expanded', 'false');
 
     toggleMenu(nav, isDesktop.matches);
-    isDesktop.addEventListener('change', () => toggleMenu(nav, isDesktop.matches));
+    isDesktop.addEventListener('change', () =>
+        toggleMenu(nav, isDesktop.matches),
+    );
     window.addEventListener('keydown', closeOnEscape);
-
 
     const navWrapper = document.createElement('div');
     navWrapper.className = 'nav-wrapper';
