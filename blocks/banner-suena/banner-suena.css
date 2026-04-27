@@ -4,57 +4,49 @@
 
 .banner-suena-inner {
     display: flex;
-  flex-direction: column;
-  gap: 16px;
-  padding: 24px 24px 4px;
-  background-color: #0055a0;
-  border-radius: 0;
-  overflow: hidden;
+    flex-direction: column;
+    gap: 16px;
+    padding: 12px 12px 0;
+    background-color: #0055a0;
+    overflow: hidden;
 }
 
 .banner-suena-content {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
     align-items: flex-end;
-  gap: 16px;
-  width: 100%;
+    gap: 16px;
+    width: 100%;
 }
 
 .banner-suena-text {
     display: flex;
     flex-direction: column;
-  gap: 16px;
-  width: 100%;
+    gap: 16px;
+    width: 100%;
 }
 
 .banner-suena-text h2,
 .banner-suena-text h3 {
     margin: 0;
     font-family: 'DM Sans', sans-serif;
-  font-size: 64px;
-  line-height: 60px;
-  font-weight: 500;
+    font-size: 64px;
+    line-height: 60px;
+    font-weight: 500;
     color: #fff;
 }
 
-.banner-suena-text p {
-    margin: 0;
-  font-size: 18px;
-  line-height: 22px;
-  color: #fff;
-}
-
 .banner-suena-cta {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: flex-end;
-  gap: 16px;
-  width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 16px;
+    width: 100%;
 }
 
 .banner-suena-cta-link {
-  flex: 1;
+    flex: 1;
 }
 
 .banner-suena-cta-link a.button:any-link,
@@ -62,8 +54,8 @@
     color: #fff;
     font-size: 16px;
     line-height: 22px;
-    text-decoration: underline;
-    font-style: italic;
+    text-decoration: none;
+    font-style: normal;
     display: inline-flex;
     align-items: center;
     gap: 8px;
@@ -76,22 +68,38 @@
     white-space: normal;
 }
 
+.banner-suena-link-prefix {
+    text-decoration: underline;
+    font-style: normal;
+}
+
+.banner-suena-link-emphasis {
+    text-decoration: none;
+    font-style: italic;
+}
+
 .banner-suena-cta-link a.button:any-link::after,
 .banner-suena-cta-link a:any-link::after {
-    content: '\2192';
-    text-decoration: none;
+    content: '';
+    background-image: url('/icons/right-arrow.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 16px;
+    height: 16px;
     display: inline-block;
+    filter: brightness(0) invert(1);
 }
 
 .banner-suena-cta-link a.button:hover,
 .banner-suena-cta-link a.button:focus,
 .banner-suena-cta-link a:hover {
-  color: #d4e8f7;
+    color: #d4e8f7;
     background-color: transparent;
 }
 
 .banner-suena-cta-link .button-container {
-  margin: 0;
+    margin: 0;
 }
 
 .banner-suena-logo {
@@ -99,40 +107,28 @@
 }
 
 .banner-suena-logo img {
-  width: 48px;
-  height: 48px;
+    width: 48px;
+    height: 48px;
 }
 
 .banner-suena-greca {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 1px;
-  width: 100%;
-  height: 20px;
-  overflow: hidden;
-}
-
-.banner-suena-greca img {
-  width: 20px;
-  height: 20px;
-  flex-shrink: 0;
+    height: 20px;
+    background-image: url('/icons/greca.svg');
+    background-repeat: repeat-x;
+    background-position: 0 0;
+    background-size: 42px 20px;
+    flex-shrink: 0;
+    margin: 0 -12px 4px;
 }
 
 @media (width < 600px) {
-  .banner-suena-text h2,
-  .banner-suena-text h3 {
-    font-size: 36px;
-    line-height: 36px;
-  }
+    .banner-suena-text h2,
+    .banner-suena-text h3 {
+        font-size: 36px;
+        line-height: 36px;
+    }
 
-  .banner-suena-text p {
-    font-size: 16px;
-    line-height: 21px;
-  }
-
-  .banner-suena-cta {
+    .banner-suena-cta {
         flex-direction: column;
         align-items: flex-start;
     }
