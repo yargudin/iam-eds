@@ -1,19 +1,76 @@
 export default function decorate(block) {
-    const rows = [...block.children];
-    const grid = document.createElement('div');
-    grid.className = 'cifras-madrid-grid';
+  const rows = [...block.children];
+  const grid = document.createElement('div');
+  grid.className = 'cifras-madrid-grid';
 
-    rows.forEach((row) => {
-        const card = document.createElement('div');
-        card.className = 'cifras-madrid-card';
-        const cols = [...row.children];
+  // Presupuesto card (row 0)
+  if (rows[0]) {
+    const cols = [...rows[0].children];
+    const card = document.createElement('div');
+    card.className = 'cifras-madrid-card cifras-madrid-card-large';
 
-        cols.forEach((col) => {
-            card.append(...col.childNodes);
-        });
+    const label = document.createElement('div');
+    label.className = 'cifras-madrid-label';
+    label.textContent = cols[0]?.textContent?.trim() || '';
+    card.append(label);
 
-        grid.append(card);
-    });
+    const img = document.createElement('div');
+    img.className = 'cifras-madrid-image';
+    const imgEl = document.createElement('img');
+    imgEl.src = '/blocks/cifras-madrid/video-placeholder.png';
+    imgEl.alt = 'Madrid en cifras';
+    img.append(imgEl);
+    card.append(img);
 
-    block.replaceChildren(grid);
+    const value = document.createElement('div');
+    value.className = 'cifras-madrid-value';
+    value.textContent = cols[1]?.textContent?.trim() || '';
+    card.append(value);
+    grid.append(card);
+  }
+
+  // Azulejos tiles
+  const azulejos = document.createElement('div');
+  azulejos.className = 'cifras-madrid-azulejos';
+  ['azulejos-tile1.png', 'azulejos-tile2.png', 'azulejos-tile1.png'].forEach((src) => {
+    const img = document.createElement('img');
+    img.src = `/blocks/cifras-madrid/${src}`;
+    img.alt = 'Azulejos';
+    azulejos.append(img);
+  });
+  grid.append(azulejos);
+
+  // Contratos card (row 1)
+  if (rows[1]) {
+    const cols = [...rows[1].children];
+    const card = document.createElement('div');
+    card.className = 'cifras-madrid-card cifras-madrid-card-contratos';
+    const label = document.createElement('div');
+    label.className = 'cifras-madrid-label';
+    label.textContent = cols[0]?.textContent?.trim() || '';
+    card.append(label);
+    const value = document.createElement('div');
+    value.className = 'cifras-madrid-value';
+    value.textContent = cols[1]?.textContent?.trim() || '';
+    card.append(value);
+    grid.append(card);
+  }
+
+  // Citas atendidas (row 2)
+  if (rows[2]) {
+    const cols = [...rows[2].children];
+    const card = document.createElement('div');
+    card.className = 'cifras-madrid-card cifras-madrid-card-citas';
+    const label = document.createElement('div');
+    label.className = 'cifras-madrid-label';
+    label.textContent = cols[0]?.textContent?.trim() || '';
+    card.append(label);
+    const value = document.createElement('div');
+    value.className = 'cifras-madrid-value';
+    value.textContent = cols[1]?.textContent?.trim() || '';
+    card.append(value);
+    grid.append(card);
+  }
+
+  block.replaceChildren(grid);
 }

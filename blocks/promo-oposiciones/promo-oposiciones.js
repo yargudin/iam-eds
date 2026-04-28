@@ -1,26 +1,44 @@
 export default function decorate(block) {
-    const row = block.children[0];
-    if (!row) return;
+  const rows = [...block.children];
+  const inner = document.createElement('div');
+  inner.className = 'promo-oposiciones-inner';
 
-    const cols = [...row.children];
-    const wrapper = document.createElement('div');
-    wrapper.className = 'promo-oposiciones-inner';
+  if (rows[0]) {
+    const cols = [...rows[0].children];
 
-    // Left column: image
+    // Left: image
     if (cols[0]) {
-        const imgCol = document.createElement('div');
-        imgCol.className = 'promo-oposiciones-image';
-        imgCol.append(...cols[0].childNodes);
-        wrapper.append(imgCol);
+      const imageDiv = document.createElement('div');
+      imageDiv.className = 'promo-oposiciones-image';
+      imageDiv.append(...cols[0].childNodes);
+      inner.append(imageDiv);
     }
 
-    // Right column: icon + title + link
+    // Highlight bar overlapping image bottom
+    const highlight = document.createElement('div');
+    highlight.className = 'promo-oposiciones-highlight';
+
+    // Azulejos icon
+    const iconDiv = document.createElement('div');
+    iconDiv.className = 'promo-oposiciones-icon';
+    const iconImg = document.createElement('img');
+    iconImg.src = '/icons/azulejos.png';
+    iconImg.alt = 'Azulejos';
+    iconImg.width = 100;
+    iconImg.height = 100;
+    iconDiv.append(iconImg);
+    highlight.append(iconDiv);
+
+    // Right: text + link
     if (cols[1]) {
-        const textCol = document.createElement('div');
-        textCol.className = 'promo-oposiciones-text';
-        textCol.append(...cols[1].childNodes);
-        wrapper.append(textCol);
+      const textDiv = document.createElement('div');
+      textDiv.className = 'promo-oposiciones-text';
+      textDiv.append(...cols[1].childNodes);
+      highlight.append(textDiv);
     }
 
-    block.replaceChildren(wrapper);
+    inner.append(highlight);
+  }
+
+  block.replaceChildren(inner);
 }
