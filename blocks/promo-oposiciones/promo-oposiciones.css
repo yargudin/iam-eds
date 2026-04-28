@@ -1,0 +1,133 @@
+.promo-oposiciones {
+    font-family: 'DM Sans', sans-serif;
+}
+
+.promo-oposiciones-inner {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    width: 100%;
+    height: 270px;
+    position: relative;
+    overflow: hidden;
+}
+
+.promo-oposiciones-image {
+    flex: 1;
+    line-height: 0;
+    min-width: 0;
+}
+
+.promo-oposiciones-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.promo-oposiciones-highlight {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+    flex: 1;
+    background-color: #fff;
+    min-width: 0;
+}
+
+.promo-oposiciones-icon {
+    flex-shrink: 0;
+    width: 100px;
+    height: 100px;
+    line-height: 0;
+    margin-left: -50px;
+    z-index: 1;
+}
+
+.promo-oposiciones-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.promo-oposiciones-text {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 16px 24px 16px 0;
+}
+
+.promo-oposiciones-text p {
+    margin: 0;
+    font-size: 28px;
+    line-height: 28px;
+    color: #1c1c1c;
+    font-weight: 400;
+}
+
+.promo-oposiciones-text .button-container {
+    margin: 0;
+}
+
+.promo-oposiciones-text a.button:any-link,
+.promo-oposiciones-text a:any-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #0055a0;
+    font-size: 16px;
+    line-height: 22px;
+    text-decoration: underline;
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    margin: 0;
+    font-weight: normal;
+    white-space: normal;
+}
+
+.promo-oposiciones-text a.button:any-link::after,
+.promo-oposiciones-text a:any-link::after {
+    content: '';
+    background-image: url('/icons/right-arrow.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    flex-shrink: 0;
+}
+
+.promo-oposiciones-text a.button:hover,
+.promo-oposiciones-text a.button:focus,
+.promo-oposiciones-text a:hover {
+    color: #003d73;
+    background-color: transparent;
+}
+
+@media (width < 600px) {
+    .promo-oposiciones-inner {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .promo-oposiciones-image img {
+        height: 200px;
+    }
+
+    .promo-oposiciones-highlight {
+        margin-top: -50px;
+    }
+
+    .promo-oposiciones-icon {
+        margin-left: 0;
+    }
+
+    .promo-oposiciones-text p {
+        font-size: 22px;
+        line-height: 24px;
+    }
+}

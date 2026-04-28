@@ -1,0 +1,118 @@
+.cifras-madrid {
+    font-family: 'DM Sans', sans-serif;
+}
+
+.cifras-madrid-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 16px;
+    height: 386px;
+}
+
+.cifras-madrid-card-large {
+    grid-column: 1 / 3;
+    grid-row: 1 / 3;
+    background-color: #f6f6f6;
+    gap: 0;
+}
+
+.cifras-madrid-azulejos {
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 4px;
+    overflow: hidden;
+}
+
+.cifras-madrid-card-contratos {
+    grid-column: 3 / 4;
+    grid-row: 2 / 4;
+    background-color: #f6f6f6;
+}
+
+.cifras-madrid-card-citas {
+    grid-column: 1 / 3;
+    grid-row: 3 / 4;
+    background-color: #d7e8f5;
+}
+
+.cifras-madrid-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 4px;
+    padding: 8px;
+}
+
+.cifras-madrid-label {
+    font-size: 16px;
+    line-height: 21px;
+    color: #1c1c1c;
+    font-weight: 400;
+    padding-bottom: 8px;
+}
+
+.cifras-madrid-card-citas .cifras-madrid-label {
+    font-size: 14px;
+    line-height: 18px;
+    border-bottom: 1px solid #000;
+}
+
+.cifras-madrid-card-contratos .cifras-madrid-label {
+    border-bottom: 1px solid #000;
+}
+
+.cifras-madrid-value {
+    font-size: 32px;
+    line-height: 42px;
+    font-weight: 700;
+    color: #1c1c1c;
+}
+
+.cifras-madrid-image {
+    flex: 1;
+    overflow: hidden;
+    line-height: 0;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+}
+
+.cifras-madrid-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.cifras-madrid-azulejos img {
+    width: 115px;
+    height: 100%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+@media (width < 900px) {
+    .cifras-madrid-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .cifras-madrid-card-large,
+    .cifras-madrid-azulejos,
+    .cifras-madrid-card-contratos,
+    .cifras-madrid-card-citas {
+        grid-column: 1 / -1;
+        grid-row: auto;
+    }
+
+    .cifras-madrid-azulejos {
+        height: 80px;
+    }
+
+    .cifras-madrid-image img {
+        height: 150px;
+    }
+}
