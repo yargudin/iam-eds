@@ -95,3 +95,16 @@
     object-fit: cover;
     display: block;
 }
+
+@media (width >= 900px) {
+    .promo-sede-container ~ .promo-sede-container .promo-sede-inner {
+        flex-direction: row-reverse;
+    }
+
+    .promo-sede-container ~ .promo-sede-container .promo-sede-text {
+        margin-right: 0;
+        margin-left: -50px;
+        border-left: 16px solid #fff;
+        border-right: none;
+    }
+}
