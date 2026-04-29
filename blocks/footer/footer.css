@@ -1,20 +1,123 @@
 footer {
-    background-color: var(--light-color);
-    font-size: var(--body-font-size-xs);
+    background-color: #fff;
+    font-family: 'DM Sans', sans-serif;
 }
 
 footer .footer > div {
-    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    margin: 0 auto;
     max-width: 1200px;
-    padding: 40px 24px 24px;
+    padding: 0 24px 24px;
 }
 
-footer .footer p {
+footer .footer .footer-greca {
+    height: 20px;
+    width: calc(100% + 48px);
+    margin-left: -24px;
+    margin-right: -24px;
+    background-image: url('/icons/greca.svg');
+    background-repeat: repeat-x;
+    background-position: 0 0;
+    background-size: 42px 20px;
+}
+
+footer .footer .footer-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 24px;
+}
+
+footer .footer .footer-brand {
+    flex-shrink: 0;
+}
+
+footer .footer .footer-brand img {
+    width: 177px;
+    height: auto;
+    display: block;
+    filter: brightness(0);
+}
+
+footer .footer .footer-links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 32px;
+    flex: 1;
+    justify-content: center;
+}
+
+footer .footer .footer-links p {
     margin: 0;
+}
+
+footer .footer .footer-links a:any-link,
+footer .footer .footer-links a.button:any-link {
+    color: #1c1c1c;
+    font-size: 16px;
+    line-height: 21px;
+    text-decoration: none;
+    white-space: nowrap;
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    margin: 0;
+    font-weight: 400;
+}
+
+footer .footer .footer-links a:hover {
+    text-decoration: underline;
+}
+
+footer .footer .footer-social {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+}
+
+footer .footer .footer-social p {
+    margin: 0;
+    display: flex;
+    gap: 12px;
+}
+
+footer .footer .footer-social img {
+    width: 24px;
+    height: 24px;
+    display: block;
+}
+
+@media (width < 900px) {
+    footer .footer .footer-content {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    footer .footer .footer-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 16px;
+    }
 }
 
 @media (min-width: 900px) {
     footer .footer > div {
-        padding: 40px 32px 24px;
+        padding: 0 32px 24px;
+    }
+
+    footer .footer .footer-greca {
+        width: calc(100% + 64px);
+        margin-left: -32px;
+        margin-right: -32px;
     }
 }
