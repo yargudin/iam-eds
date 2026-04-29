@@ -1,21 +1,33 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta http-equiv="Content-Security-Policy"
-          content="script-src 'nonce-aem' 'strict-dynamic' 'unsafe-inline' http: https:; base-uri 'self'; object-src 'none';"
-          move-to-http-header="true">
-  <title>Madrid - Ayuntamiento de Madrid</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="header" content="header-madrid">
+    <meta
+            http-equiv="Content-Security-Policy"
+            content="script-src 'nonce-aem' 'strict-dynamic' 'unsafe-inline' http: https:; base-uri 'self'; object-src 'none';"
+            move-to-http-header="true">
+    <title>Madrid - Ayuntamiento de Madrid</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="header" content="header-madrid">
     <script nonce="aem" src="/scripts/aem.js" type="module"></script>
     <script nonce="aem" src="/scripts/scripts.js" type="module"></script>
     <link rel="stylesheet" href="/styles/styles.css"/>
-    <meta name="image"
-          content="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/07a2afdc-3aa3-40e9-8fc5-faa6a9c4f609">
-    <meta property="og:image"
-          content="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/07a2afdc-3aa3-40e9-8fc5-faa6a9c4f609">
-    <meta name="twitter:image"
-          content="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/07a2afdc-3aa3-40e9-8fc5-faa6a9c4f609">
+    <meta name="Title" content="Madrid - Ayuntamiento de Madrid">
+    <meta property="og:Title" content="Madrid - Ayuntamiento de Madrid">
+    <meta name="twitter:Title" content="Madrid - Ayuntamiento de Madrid">
+    <meta name="image" content="/images/hero-puerta-alcala.jpg">
+    <meta property="og:image" content="/images/hero-puerta-alcala.jpg">
+    <meta name="twitter:image" content="/images/hero-puerta-alcala.jpg">
+    <script nonce="aem">window.LiveReloadOptions = {
+        path: "livereload/d9c7f9a76eb2b.ns-team-adobe-aem-foundation--aem-experience-catalyst-6b4082e6.svc.cluster.local",
+        port: 443,
+        host: 'preview-aemcoder.adobe.io',
+        https: true
+    };</script>
+    <script nonce="aem" src="/__internal__/livereload.js"></script>
+    <style>a[href] {
+        pointer-events: none !important;
+        cursor: default !important;
+    }</style>
 </head>
 <body>
 <header></header>
@@ -34,7 +46,6 @@
                 </div>
             </div>
         </div>
-        <div class="card"></div>
     </div>
     <div>
         <h2>¿Qué pasa en Madrid?</h2>
@@ -179,8 +190,13 @@
         </div>
     </div>
     <div>
-        <div class="promo-ciudad">
+        <div class="promo-sede">
             <div>
+                <div>
+                    <h3>Asómate a Madrid</h3>
+                    <p>Accede a Ciudad y descubre la vida que hay en Madrid.</p>
+                    <p><a href="/ciudad">Accede a Ciudad</a></p>
+                </div>
                 <div>
                     <picture>
                         <source type="image/webp"
@@ -190,11 +206,6 @@
                              src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/be26e80e-dd4e-41f5-b60a-3585cbda1053"
                              width="750" height="500">
                     </picture>
-                </div>
-                <div>
-                    <h3>Asómate a Madrid</h3>
-                    <p>Accede a Ciudad y descubre la vida que hay en Madrid.</p>
-                    <p><a href="/ciudad">Accede a Ciudad</a></p>
                 </div>
             </div>
         </div>

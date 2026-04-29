@@ -237,7 +237,8 @@ main {
   display: flex;
   flex-direction: column;
   gap: 120px;
-  padding: 0 64px;
+  padding: 0 64px 120px;
+
 }
 
 main > .section {
