@@ -6,8 +6,21 @@
 @media screen and (min-width: 900px) {
     .section.hero-mosaic-container,
     .section.hero-mosaic-container > .hero-mosaic-wrapper {
-        margin-left: 0;
-        margin-right: 0;
+        box-sizing: border-box;
+    }
+    .section.hero-mosaic-container > .hero-mosaic-wrapper {
+        width: 100%;
+        margin: 0 auto;
+        flex-grow: 1;
+        max-width: 1280px;
+    }
+    .section.hero-mosaic-container {
+        margin-left: -64px;
+        box-sizing: border-box;
+        overflow: hidden;
+        width: calc(100% + 128px);
+        max-width: 100vw;
+        display: flex;
     }
 }
 
@@ -109,9 +122,8 @@
 @media screen and (min-width: 900px) {
     .hero-mosaic {
         width: 100%;
-        margin-left: auto;
-        margin-right: auto;
         padding: 8px 16px 0;
+        margin-left: 0;
     }
 
     .hero-mosaic .hero-mosaic-grid {
