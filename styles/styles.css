@@ -237,7 +237,7 @@ main {
   display: flex;
   flex-direction: column;
   gap: 120px;
-  padding: 0 64px 120px;
+  padding: 0 16px 120px;
 
 }
 
@@ -249,6 +249,12 @@ main > .section > div {
   max-width: 1200px;
   margin: auto;
   padding: 0;
+}
+
+@media (width >= 900px) {
+  main {
+    padding: 0 64px 120px;
+  }
 }
 
 main > .section:first-of-type {

@@ -3,67 +3,78 @@
     padding: 0;
 }
 
-/* Hero Mosaic Block */
-.hero-mosaic {
-    position: relative;
-    width: 100%;
-    /* max-width: 1280px; */
-    margin: 0;
+@media screen and (min-width: 900px) {
+    .section.hero-mosaic-container,
+    .section.hero-mosaic-container > .hero-mosaic-wrapper {
+        margin-left: 0;
+        margin-right: 0;
+    }
 }
 
-/* Image mosaic grid — 4 columns x 2 rows */
+/* Hero Mosaic Block - Mobile First */
+.hero-mosaic {
+    position: relative;
+    width: calc(100% + 32px);
+    margin-left: -16px;
+    padding: 0 4px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+/* Image mosaic grid — mobile: 2 columns x 3 rows */
 .hero-mosaic .hero-mosaic-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 250px 250px;
-    gap: 16px;
-    padding: 8px 16px 0;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 198px);
+    gap: 4px;
 }
 
 /* Each cell shows a portion of the same background image */
 .hero-mosaic .hero-mosaic-cell {
-    background-size: 400% 200%;
+    background-size: 200% 300%;
     background-repeat: no-repeat;
-    border-radius: 8px;
-    overflow: hidden;
 }
 
-/* Top row — tiles 1-4 (row 1) */
+/* Mobile: 2x3 grid positions */
 .hero-mosaic .hero-mosaic-cell-1 {
     background-position: 0 0;
 }
+
 .hero-mosaic .hero-mosaic-cell-2 {
-    background-position: 33.33% 0;
-}
-.hero-mosaic .hero-mosaic-cell-3 {
-    background-position: 66.66% 0;
-}
-.hero-mosaic .hero-mosaic-cell-4 {
     background-position: 100% 0;
 }
-/* Bottom row — tiles 5-8 (row 2) */
+
+.hero-mosaic .hero-mosaic-cell-3 {
+    background-position: 0 50%;
+}
+
+.hero-mosaic .hero-mosaic-cell-4 {
+    background-position: 100% 50%;
+}
+
 .hero-mosaic .hero-mosaic-cell-5 {
     background-position: 0 100%;
 }
+
 .hero-mosaic .hero-mosaic-cell-6 {
-    background-position: 33.33% 100%;
-}
-.hero-mosaic .hero-mosaic-cell-7 {
-    background-position: 66.66% 100%;
-}
-.hero-mosaic .hero-mosaic-cell-8 {
     background-position: 100% 100%;
 }
 
-/* Title overlay card */
+/* Hide cells 7 & 8 on mobile (only 6 tiles) */
+.hero-mosaic .hero-mosaic-cell-7,
+.hero-mosaic .hero-mosaic-cell-8 {
+    display: none;
+}
+
+/* Title overlay card - absolute, centered vertically */
 .hero-mosaic .hero-mosaic-title {
     position: absolute;
-    bottom: 250px;
-    left: 16px;
-    width: 619px;
-    max-width: 619px;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 295px;
     background-color: #fff;
-    padding: 24px 48px;
+    padding: 12px 12px 8px;
     font-family: var(--madrid-font);
     z-index: 2;
     box-sizing: border-box;
@@ -76,18 +87,6 @@
     font-family: var(--madrid-font);
 }
 
-.hero-mosaic .hero-mosaic-title h1 {
-    font-weight: 600;
-    font-size: 56px;
-    line-height: 60px;
-}
-
-.hero-mosaic .hero-mosaic-title h2 {
-    font-weight: 500;
-    font-size: 40px;
-    line-height: 52px;
-}
-
 .hero-mosaic .hero-mosaic-title p {
     margin: 0;
     font-family: var(--madrid-font);
@@ -95,77 +94,96 @@
 }
 
 .hero-mosaic .hero-mosaic-title p:first-child {
-    font-weight: 600;
-    font-size: 56px;
-    line-height: 60px;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 42px;
 }
 
 .hero-mosaic .hero-mosaic-title p:nth-child(2) {
-    font-weight: 500;
-    font-size: 40px;
-    line-height: 52px;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 28px;
 }
 
-/* Mobile responsive */
-@media screen and (max-width: 900px) {
-    .hero-mosaic .hero-mosaic-grid {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(4, 140px);
-        gap: 4px;
-        padding: 4px 8px 0;
+/* Desktop overrides */
+@media screen and (min-width: 900px) {
+    .hero-mosaic {
+        width: 100%;
+        margin-left: 0;
+        padding: 8px 16px 0;
     }
 
-    /* Recalculate positions for 2-column mobile layout */
+    .hero-mosaic .hero-mosaic-grid {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 250px 250px;
+        gap: 16px;
+    }
+
+    .hero-mosaic .hero-mosaic-cell {
+        background-size: 400% 200%;
+        border-radius: 8px;
+        overflow: hidden;
+    }
+
+    /* Show all 8 cells on desktop */
+    .hero-mosaic .hero-mosaic-cell-7,
+    .hero-mosaic .hero-mosaic-cell-8 {
+        display: block;
+    }
+
+    /* Desktop: 4x2 grid positions */
     .hero-mosaic .hero-mosaic-cell-1 {
         background-position: 0 0;
     }
 
     .hero-mosaic .hero-mosaic-cell-2 {
-        background-position: 100% 0;
+        background-position: 33.33% 0;
     }
 
     .hero-mosaic .hero-mosaic-cell-3 {
-        background-position: 0 33%;
+        background-position: 66.66% 0;
     }
 
     .hero-mosaic .hero-mosaic-cell-4 {
-        background-position: 100% 33%;
+        background-position: 100% 0;
     }
 
     .hero-mosaic .hero-mosaic-cell-5 {
-        background-position: 0 66%;
+        background-position: 0 100%;
     }
 
     .hero-mosaic .hero-mosaic-cell-6 {
-        background-position: 100% 66%;
+        background-position: 33.33% 100%;
     }
 
     .hero-mosaic .hero-mosaic-cell-7 {
-        background-position: 0 100%;
+        background-position: 66.66% 100%;
     }
 
     .hero-mosaic .hero-mosaic-cell-8 {
         background-position: 100% 100%;
     }
 
-    .hero-mosaic .hero-mosaic-cell {
-        background-size: 200% 400%;
-    }
-
     .hero-mosaic .hero-mosaic-title {
-        position: relative;
-        left: 0;
-        max-width: 100%;
-        padding: 16px 24px;
+        position: absolute;
+        top: auto;
+        bottom: 250px;
+        left: 16px;
+        transform: none;
+        width: 619px;
+        max-width: 619px;
+        padding: 24px 48px;
     }
 
     .hero-mosaic .hero-mosaic-title p:first-child {
-        font-size: 32px;
-        line-height: 36px;
+        font-weight: 600;
+        font-size: 56px;
+        line-height: 60px;
     }
 
     .hero-mosaic .hero-mosaic-title p:nth-child(2) {
-        font-size: 24px;
-        line-height: 32px;
+        font-weight: 500;
+        font-size: 40px;
+        line-height: 52px;
     }
 }

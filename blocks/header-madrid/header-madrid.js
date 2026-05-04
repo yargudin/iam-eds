@@ -118,7 +118,7 @@ export default async function decorate(block) {
     <span class="nav-hamburger-icon"></span>
   </button>`;
     hamburger.addEventListener('click', () => toggleMenu(nav));
-    navTools.append(hamburger);
+    nav.append(hamburger);
     nav.setAttribute('aria-expanded', 'false');
 
     toggleMenu(nav, isDesktop.matches);
@@ -127,11 +127,11 @@ export default async function decorate(block) {
     );
     window.addEventListener('keydown', closeOnEscape);
 
+    // Greca decorative border inside nav
+    buildGreca(nav);
+
     const navWrapper = document.createElement('div');
     navWrapper.className = 'nav-wrapper';
     navWrapper.append(nav);
-
-    // Greca decorative border
-    buildGreca(navWrapper);
     block.append(navWrapper);
 }
