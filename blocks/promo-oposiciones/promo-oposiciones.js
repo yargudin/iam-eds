@@ -22,7 +22,7 @@ export default function decorate(block) {
     const iconDiv = document.createElement('div');
     iconDiv.className = 'promo-oposiciones-icon';
     const iconImg = document.createElement('img');
-    iconImg.src = '/icons/azulejos.png';
+    iconImg.src = '/icons/azulejos.svg';
     iconImg.alt = 'Azulejos';
     iconImg.width = 100;
     iconImg.height = 100;

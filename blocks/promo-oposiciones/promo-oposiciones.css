@@ -1,26 +1,23 @@
+/* Promo Oposiciones - Mobile First */
 .promo-oposiciones {
     font-family: 'DM Sans', sans-serif;
 }
 
 .promo-oposiciones-inner {
     display: flex;
-    flex-direction: row;
-    align-items: stretch;
+    flex-direction: column;
+    gap: 16px;
     width: 100%;
-    height: 270px;
-    position: relative;
-    overflow: hidden;
 }
 
 .promo-oposiciones-image {
-    flex: 1;
     line-height: 0;
-    min-width: 0;
 }
 
 .promo-oposiciones-image img {
     width: 100%;
-    height: 100%;
+    height: 166px;
+    min-height: 166px;
     object-fit: cover;
     display: block;
 }
@@ -30,18 +27,13 @@
     flex-direction: row;
     align-items: center;
     gap: 16px;
-    flex: 1;
-    background-color: #fff;
-    min-width: 0;
 }
 
 .promo-oposiciones-icon {
     flex-shrink: 0;
-    width: 100px;
-    height: 100px;
+    width: 85px;
+    height: 86px;
     line-height: 0;
-    margin-left: -50px;
-    z-index: 1;
 }
 
 .promo-oposiciones-icon img {
@@ -55,7 +47,6 @@
     display: flex;
     flex-direction: column;
     gap: 8px;
-    padding: 16px 24px 16px 0;
 }
 
 .promo-oposiciones-text p {
@@ -64,6 +55,7 @@
     line-height: 28px;
     color: #1c1c1c;
     font-weight: 400;
+    white-space: break-spaces;
 }
 
 .promo-oposiciones-text .button-container {
@@ -108,26 +100,47 @@
     background-color: transparent;
 }
 
-@media (width < 600px) {
+/* Desktop overrides */
+@media (width >= 900px) {
     .promo-oposiciones-inner {
-        flex-direction: column;
-        height: auto;
+        flex-direction: row;
+        align-items: stretch;
+        height: 270px;
+        gap: 0;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .promo-oposiciones-image {
+        flex: 1;
+        min-width: 0;
     }
 
     .promo-oposiciones-image img {
-        height: 200px;
+        height: 100%;
+        min-height: unset;
     }
 
     .promo-oposiciones-highlight {
-        margin-top: -50px;
+        flex: 1;
+        background-color: #fff;
+        min-width: 0;
     }
 
     .promo-oposiciones-icon {
-        margin-left: 0;
+        width: 100px;
+        height: 100px;
+        margin-left: -50px;
+        z-index: 1;
     }
 
-    .promo-oposiciones-text p {
-        font-size: 22px;
-        line-height: 24px;
+    .promo-oposiciones-icon img {
+        background-color: white;
+        box-sizing: border-box;
+        padding: 11.5px;
+    }
+
+    .promo-oposiciones-text {
+        padding: 16px 24px 16px 0;
     }
 }

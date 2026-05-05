@@ -1,3 +1,4 @@
+/* Cifras Madrid - Mobile First */
 .cifras-madrid {
     font-family: 'DM Sans', sans-serif;
 }
@@ -6,37 +7,8 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-    gap: 16px;
-    height: 386px;
-}
-
-.cifras-madrid-card-large {
-    grid-column: 1 / 3;
-    grid-row: 1 / 3;
-    background-color: #f6f6f6;
     gap: 0;
-}
-
-.cifras-madrid-azulejos {
-    grid-column: 3 / 4;
-    grid-row: 1 / 2;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 4px;
-    overflow: hidden;
-}
-
-.cifras-madrid-card-contratos {
-    grid-column: 3 / 4;
-    grid-row: 2 / 4;
-    background-color: #f6f6f6;
-}
-
-.cifras-madrid-card-citas {
-    grid-column: 1 / 3;
-    grid-row: 3 / 4;
-    background-color: #d7e8f5;
+    height: 384px;
 }
 
 .cifras-madrid-card {
@@ -47,22 +19,56 @@
     padding: 8px;
 }
 
+/* Mobile: large card spans 2 cols x 2 rows (top-left) */
+.cifras-madrid-card-large {
+    grid-column: 1 / 3;
+    grid-row: 1 / 3;
+    background-color: #f6f6f6;
+    gap: 0;
+    border: 1px solid #f6f6f6;
+}
+
+/* Mobile: hide desktop azulejos */
+.cifras-madrid-azulejos {
+    display: none;
+}
+
+/* Mobile: show mobile azulejos (1x1 top-right) */
+.cifras-madrid-azulejos-mobile {
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.cifras-madrid-azulejos-mobile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Mobile: contratos spans 1 col x 2 rows (bottom-right) */
+.cifras-madrid-card-contratos {
+    grid-column: 3 / 4;
+    grid-row: 2 / 4;
+    background-color: #f6f6f6;
+}
+
+/* Mobile: citas spans 2 cols x 1 row (bottom-left) */
+.cifras-madrid-card-citas {
+    grid-column: 1 / 3;
+    grid-row: 3 / 4;
+    background-color: #d7e8f5;
+}
+
 .cifras-madrid-label {
-    font-size: 16px;
-    line-height: 21px;
+    font-size: 14px;
+    line-height: 18px;
     color: #1c1c1c;
     font-weight: 400;
     padding-bottom: 8px;
-}
-
-.cifras-madrid-card-citas .cifras-madrid-label {
-    font-size: 14px;
-    line-height: 18px;
-    border-bottom: 1px solid #000;
-}
-
-.cifras-madrid-card-contratos .cifras-madrid-label {
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid #1c1c1c;
 }
 
 .cifras-madrid-value {
@@ -87,32 +93,57 @@
     display: block;
 }
 
-.cifras-madrid-azulejos img {
-    width: 115px;
-    height: 100%;
-    object-fit: cover;
-    flex-shrink: 0;
-}
-
-@media (width < 900px) {
+/* Desktop overrides */
+@media (width >= 900px) {
     .cifras-madrid-grid {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
+        gap: 16px;
+        height: 386px;
     }
 
-    .cifras-madrid-card-large,
-    .cifras-madrid-azulejos,
-    .cifras-madrid-card-contratos,
-    .cifras-madrid-card-citas {
-        grid-column: 1 / -1;
-        grid-row: auto;
+    .cifras-madrid-card-large {
+        border: none;
     }
 
+    /* Desktop: show desktop azulejos (3 tiles, top-right) */
     .cifras-madrid-azulejos {
-        height: 80px;
+        display: flex;
+        grid-column: 3 / 4;
+        grid-row: 1 / 2;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 4px;
+        overflow: hidden;
     }
 
-    .cifras-madrid-image img {
-        height: 150px;
+    .cifras-madrid-azulejos img {
+        width: 115px;
+        height: 100%;
+        object-fit: cover;
+        flex-shrink: 0;
+    }
+
+    /* Desktop: hide mobile azulejos */
+    .cifras-madrid-azulejos-mobile {
+        display: none;
+    }
+
+    .cifras-madrid-card-contratos {
+        grid-column: 3 / 4;
+        grid-row: 2 / 4;
+    }
+
+    .cifras-madrid-card-citas {
+        grid-column: 1 / 3;
+        grid-row: 3 / 4;
+    }
+
+    .cifras-madrid-label {
+        font-size: 16px;
+        line-height: 21px;
+    }
+
+    .cifras-madrid-card-citas .cifras-madrid-label {
+        font-size: 14px;
+        line-height: 18px;
     }
 }

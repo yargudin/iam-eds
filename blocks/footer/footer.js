@@ -17,21 +17,13 @@ export default async function decorate(block) {
     greca.setAttribute('aria-hidden', 'true');
     footer.append(greca);
 
-    // Content row
+    // Content
     const content = document.createElement('div');
     content.className = 'footer-content';
 
     const sections = [...fragment.querySelectorAll(':scope > .section')];
 
-    // Brand (first section)
-    if (sections[0]) {
-        const brand = document.createElement('div');
-        brand.className = 'footer-brand';
-        brand.append(...sections[0].querySelectorAll('p'));
-        content.append(brand);
-    }
-
-    // Links (second section)
+    // Links (second section) — shown first on mobile
     if (sections[1]) {
         const links = document.createElement('div');
         links.className = 'footer-links';
@@ -39,14 +31,27 @@ export default async function decorate(block) {
         content.append(links);
     }
 
+    // Bottom row: brand + social
+    const bottom = document.createElement('div');
+    bottom.className = 'footer-bottom';
+
+    // Brand (first section)
+    if (sections[0]) {
+        const brand = document.createElement('div');
+        brand.className = 'footer-brand';
+        brand.append(...sections[0].querySelectorAll('p'));
+        bottom.append(brand);
+    }
+
     // Social (third section)
     if (sections[2]) {
         const social = document.createElement('div');
         social.className = 'footer-social';
         social.append(...sections[2].querySelectorAll('p'));
-        content.append(social);
+        bottom.append(social);
     }
 
+    content.append(bottom);
     footer.append(content);
     block.append(footer);
 }

@@ -1,3 +1,4 @@
+/* Banner Sueña - Mobile First */
 .banner-suena {
     font-family: 'DM Sans', sans-serif;
 }
@@ -33,6 +34,13 @@
     font-size: 64px;
     line-height: 60px;
     font-weight: 500;
+    color: #fff;
+}
+
+.banner-suena-text p {
+    margin: 0;
+    font-size: 18px;
+    line-height: 22px;
     color: #fff;
 }
 
@@ -119,17 +127,4 @@
     background-size: 42px 20px;
     flex-shrink: 0;
     margin: 0 -12px 4px;
-}
-
-@media (width < 600px) {
-    .banner-suena-text h2,
-    .banner-suena-text h3 {
-        font-size: 36px;
-        line-height: 36px;
-    }
-
-    .banner-suena-cta {
-        flex-direction: column;
-        align-items: flex-start;
-    }
 }

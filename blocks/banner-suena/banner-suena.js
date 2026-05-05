@@ -15,11 +15,6 @@ export default function decorate(block) {
             textDiv.append(...cols[0].childNodes);
         }
 
-        // Remove subtitle paragraphs (keep only headings)
-        [...textDiv.querySelectorAll('p:not(.button-container)')].forEach((p) => {
-            if (!p.querySelector('a')) p.remove();
-        });
-
         // Extract the link into a separate CTA row
         const linkP = textDiv.querySelector('.button-container') || textDiv.querySelector('p:has(a)');
 
