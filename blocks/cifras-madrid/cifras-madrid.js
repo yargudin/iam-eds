@@ -29,7 +29,7 @@ export default function decorate(block) {
     grid.append(card);
   }
 
-  // Azulejos tiles
+  // Desktop azulejos tiles (hidden on mobile)
   const azulejos = document.createElement('div');
   azulejos.className = 'cifras-madrid-azulejos';
   ['azulejos-tile1.png', 'azulejos-tile2.png', 'azulejos-tile1.png'].forEach((src) => {
@@ -39,6 +39,15 @@ export default function decorate(block) {
     azulejos.append(img);
   });
   grid.append(azulejos);
+
+  // Mobile azulejos (single image, shown only on mobile)
+  const azulejosMobile = document.createElement('div');
+  azulejosMobile.className = 'cifras-madrid-azulejos-mobile';
+  const azulejosMobileImg = document.createElement('img');
+  azulejosMobileImg.src = '/icons/azulejos-new.png';
+  azulejosMobileImg.alt = 'Azulejos';
+  azulejosMobile.append(azulejosMobileImg);
+  grid.append(azulejosMobile);
 
   // Contratos card (row 1)
   if (rows[1]) {
