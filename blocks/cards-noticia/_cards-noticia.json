@@ -1,0 +1,71 @@
+{
+    "definitions": [
+        {
+            "title": "Cards Noticia",
+            "id": "cards-noticia",
+            "plugins": {
+                "xwalk": {
+                    "page": {
+                        "resourceType": "core/franklin/components/block/v1/block",
+                        "template": {
+                            "name": "Cards Noticia",
+                            "filter": "cards-noticia"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "title": "Card Noticia",
+            "id": "card-noticia",
+            "plugins": {
+                "xwalk": {
+                    "page": {
+                        "resourceType": "core/franklin/components/block/v1/block/item",
+                        "template": {
+                            "name": "Card Noticia",
+                            "model": "card-noticia"
+                        }
+                    }
+                }
+            }
+        }
+    ],
+    "models": [
+        {
+            "id": "card-noticia",
+            "fields": [
+                {
+                    "component": "reference",
+                    "valueType": "string",
+                    "name": "image",
+                    "label": "Image",
+                    "multi": false
+                },
+                {
+                    "component": "text",
+                    "name": "title",
+                    "label": "Title",
+                    "valueType": "string"
+                },
+                {
+                    "component": "aem-content",
+                    "name": "link",
+                    "label": "Link"
+                },
+                {
+                    "component": "text",
+                    "name": "linkText",
+                    "label": "Link Text",
+                    "valueType": "string"
+                }
+            ]
+        }
+    ],
+    "filters": [
+        {
+            "id": "cards-noticia",
+            "components": ["card-noticia"]
+        }
+    ]
+}
