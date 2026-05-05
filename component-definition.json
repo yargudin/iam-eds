@@ -83,6 +83,21 @@
       "id": "blocks",
       "components": [
         {
+          "title": "Banner Sueña",
+          "id": "banner-suena",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Banner Suena",
+                  "model": "banner-suena"
+                }
+              }
+            }
+          }
+        },
+        {
           "title": "Cards Municipal",
           "id": "cards-municipal",
           "plugins": {
@@ -98,15 +113,30 @@
           }
         },
         {
-          "title": "Card",
-          "id": "card",
+          "title": "Cards Noticia",
+          "id": "cards-noticia",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Cards Noticia",
+                  "filter": "cards-noticia"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Card Noticia",
+          "id": "card-noticia",
           "plugins": {
             "xwalk": {
               "page": {
                 "resourceType": "core/franklin/components/block/v1/block/item",
                 "template": {
-                  "name": "Card",
-                  "model": "card"
+                  "name": "Card Noticia",
+                  "model": "card-noticia"
                 }
               }
             }
@@ -143,6 +173,36 @@
           }
         },
         {
+          "title": "Cifras Madrid",
+          "id": "cifras-madrid",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Cifras Madrid",
+                  "filter": "cifras-madrid"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Cifra",
+          "id": "cifra",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Cifra",
+                  "model": "cifra"
+                }
+              }
+            }
+          }
+        },
+        {
           "title": "Columns",
           "id": "columns",
           "plugins": {
@@ -173,6 +233,21 @@
           }
         },
         {
+          "title": "Header Madrid",
+          "id": "header-madrid",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Header Madrid",
+                  "model": "header-madrid"
+                }
+              }
+            }
+          }
+        },
+        {
           "title": "Hero",
           "id": "hero",
           "plugins": {
@@ -182,6 +257,51 @@
                 "template": {
                   "name": "Hero",
                   "model": "hero"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Hero Mosaic",
+          "id": "hero-mosaic",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Hero Mosaic",
+                  "model": "hero-mosaic"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Promo Oposiciones",
+          "id": "promo-oposiciones",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Promo Oposiciones",
+                  "model": "promo-oposiciones"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Promo Sede",
+          "id": "promo-sede",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Promo Sede",
+                  "model": "promo-sede"
                 }
               }
             }

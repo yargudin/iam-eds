@@ -13,9 +13,18 @@
       "button",
       "title",
       "hero",
+      "hero-mosaic",
+      "banner-suena",
       "cards",
+      "cards-noticia",
+      "cards-municipal",
+      "cifras-madrid",
       "columns",
-      "fragment"
+      "fragment",
+      "header-madrid",
+      "promo-oposiciones",
+      "promo-sede",
+      "tabs-audience"
     ]
   },
   {
@@ -28,6 +37,18 @@
     "id": "cards",
     "components": [
       "card"
+    ]
+  },
+  {
+    "id": "cards-noticia",
+    "components": [
+      "card-noticia"
+    ]
+  },
+  {
+    "id": "cifras-madrid",
+    "components": [
+      "cifra"
     ]
   },
   {
